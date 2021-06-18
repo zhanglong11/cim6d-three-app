@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>全景图</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="./three.min.js"></script>
+    <script src="./photo-sphere-viewer.min.js"></script>
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      #viewer {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="viewer"></div>
+    <script>
+      function getUrlStr(key) {
+        try {
+          let url = window.location.href.split('?')[1]
+          var reg = new RegExp('(^|&)' + key + '=([^&]*)(&|$)')
+          var r = url.match(reg)
+          if (r) {
+            return decodeURIComponent(r[2])
+          } else {
+            return null
+          }
+        } catch (e) {
+          return ''
+        }
+      }
+
+      let fileUrl = getUrlStr('fileUrl')
+      if (fileUrl) {
+        let div = document.getElementById('viewer')
+        let PSV = new PhotoSphereViewer({
+          panorama: fileUrl,
+          container: div,
+          time_anim: false,
+          navbar_style: {
+            backgroundColor: 'rgba(58, 67, 77, 0.7)'
+          }
+        })
+      }
+    </script>
+  </body>
+</html>

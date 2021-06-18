@@ -1,0 +1,239 @@
+@import '~@/styles/common.less';
+.main-body {
+  padding-bottom: 41px;
+  .card-title-outer {
+    width: 700rpx;
+    margin: 0 auto;
+    .title {
+      padding-top: 20rpx;
+      padding-left: 25rpx;
+      display: flex;
+      align-items: center;
+      .icon{
+
+        margin-left: 20rpx;
+      }
+    }
+  }
+  .uni-card {
+    width: 100%;
+    position: relative;
+    .icon-clear{
+      position: absolute;
+      top: -26rpx;
+      right: 10rpx;
+      z-index: 10;
+    }
+  }
+  .placeholder {
+    color: @placeholderColor;
+  }
+
+  .uni-input,
+  textarea,
+  input {
+    font-size: 14px;
+  }
+
+  textarea {
+    width: auto;
+  }
+  .line {
+    margin: 30rpx 20rpx;
+    height: 2rpx;
+    background-color: @line;
+  }
+}
+.btn-wrapper {
+  display: flex;
+  .button {
+    flex: 1;
+    margin: 0 20rpx;
+  }
+}
+.disabled {
+  color: #b6b6b6;
+}
+.mark-container {
+  margin-top: 40rpx;
+  background-color: #c1bebe;
+  .img-container {
+    overflow: auto;
+    max-height: 600rpx;
+  }
+}
+.common-btn-group {
+  display: flex;
+  justify-content: flex-start;
+  .common-button {
+    margin: 20rpx 0 0 0;
+    border-radius: 0;
+    &:first-child {
+      border-top-left-radius: 15rpx;
+      margin-left: 10rpx;
+    }
+    &:last-child {
+      border-top-right-radius: 15rpx;
+    }
+  }
+}
+.uni-popup {
+  .popup-container {
+    width: 700rpx;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    .title {
+      height: 80px;
+      line-height: 80px;
+      border-bottom: 2rpx #bab7b7 solid;
+      padding-left: 44px;
+      font-weight: normal;
+    }
+    .body {
+      flex: 1;
+      max-height: 60vh;
+      overflow-y: scroll;
+      padding: 10rpx;
+      line-height: 60rpx;
+      /deep/ .approver-main {
+        padding: 20rpx 50rpx;
+      }
+      /deep/ .fm-form {
+        .el-form-item__label {
+          width: 150rpx !important;
+          color: #c0c4cc;
+        }
+        .el-form-item__content {
+          margin-left: 150rpx !important;
+        }
+      }
+      .audit-card {
+        margin-bottom: 40rpx;
+        background: #ffffff;
+        box-shadow: 0 2px 3px 0 rgba(79, 85, 101, 0.06);
+        border-radius: 16px;
+        position: relative;
+        top: 0;
+        height: auto;
+        left: 0;
+        padding: 10rpx;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .audit-detail-item {
+          display: flex;
+          padding: 10rpx 30rpx;
+          color: #c0c4cc;
+          font-size: 14px;
+          .label {
+            flex: 0 0 150rpx;
+          }
+          .value {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+  .dialog-footer-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20rpx 0;
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1rpx;
+      background-color: #bab7b7;
+      position: absolute;
+      transform: scaleY(0.5);
+      top: 0;
+      left: 0;
+    }
+    .common-button {
+      line-height: 30rpx;
+      margin: 0 20rpx;
+    }
+  }
+}
+.uni-dialog-button-group {
+  background-color: #fff;
+  height: auto;
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+  flex-direction: row;
+  border-top-color: #f5f5f5;
+  border-top-style: solid;
+  border-top-width: 1px;
+  justify-content: center;
+}
+.btn-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  // 默认嵌套在main-body中
+  padding: 36px 5px 30px 5px;
+  &.inline-btn {
+    display: flex;
+    align-items: center;
+    .button {
+      margin: 0 16px;
+    }
+  }
+
+  .button {
+    flex: 1;
+    &[type='primary'] {
+      background: linear-gradient(90deg, rgba(50, 149, 250, 1) 0%, rgba(17, 106, 220, 1) 100%);
+      box-shadow: 0px 0 13px 0px rgba(9, 52, 107, 0.14);
+    }
+    box-shadow: 0px 0 13px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 45px;
+  }
+}
+.problem-list{
+  border:1rpx #b0afaf solid;
+  margin: 20rpx 0;
+  border-radius: 10rpx;
+  padding: 20rpx 0;
+  background-color: #fff;
+  .title{
+    padding: 0 20rpx 10rpx 30rpx;
+    font-size: 14px;
+    border-bottom: 1rpx #000 solid;
+  }
+  .item{
+    margin: 10rpx 30rpx;
+    border-bottom: 2rpx #b0afaf solid;
+    &:last-child{
+      border-bottom: none;
+    }
+    .item-line{
+      font-size: 12px;
+      display: flex;
+      line-height: 50rpx;
+      justify-content: space-between;
+      align-items: flex-start;
+      .tag{
+        background: #6fe587;
+        margin: 5px;
+        line-height: 30rpx;
+        padding: 2rpx 10rpx;
+        color:#fff
+      }
+      &.file{
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+.ml20{
+  margin-left: 20rpx;
+}
+.mr20{
+  margin-right: 20rpx;
+}

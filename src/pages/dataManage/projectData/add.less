@@ -1,0 +1,85 @@
+@import '~@/styles/common.less';
+
+.main {
+  padding-top: 15px;
+
+  .main-body {
+    padding-bottom: 41px;
+    .uni-card {
+      width: 100%;
+    }
+    .placeholder {
+      color: @placeholderColor;
+    }
+
+    .uni-input,
+    textarea,
+    input {
+      font-size: 14px;
+    }
+
+    textarea {
+      width: auto;
+    }
+
+    .file-data {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      padding: 30px 0px;
+
+      .file-data-l {
+        padding-left: 68px;
+      }
+      .file-data-r {
+        padding-right: 68px;
+      }
+    }
+  }
+
+  .file-list {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    position: relative;
+    padding: 20px 0px;
+    align-items: center;
+
+    .file-item-name {
+      padding-left: 38px;
+      display: flex;
+      align-items: baseline;
+      .ellipsis {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 200px;
+      }
+      .file-item-delete {
+        margin-left: 20px;
+        color: red;
+      }
+    }
+
+    .file-item-view {
+      padding: 8px;
+      font-size: 12px;
+      width: 8px;
+      height: 8px;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      border-right: 1px #ccc solid;
+      border-bottom: 1px #ccc solid;
+      margin-right: 38px;
+      margin-left: 20px;
+    }
+
+    .file-item-border {
+      width: 100%;
+      position: absolute;
+      border-bottom: solid 1px #eaeaea;
+      bottom: 0px;
+      transform: scaleY(0.5);
+    }
+  }
+}

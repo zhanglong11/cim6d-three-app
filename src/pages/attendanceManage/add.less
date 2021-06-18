@@ -1,0 +1,103 @@
+@import '~@/styles/common.less';
+
+.main {
+  padding-top: 15px;
+
+  .main-body {
+    padding-bottom: 41px;
+    .uni-card {
+      width: 100%;
+      .body-hdc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 30px;
+      }
+    }
+    .body-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      font-size: 14px;
+      margin-top: 15px;
+      .body-icon:before {
+        content: '';
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+        display: inline-block;
+        background: url(@/static/images/clock/clock-13.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+    }
+    .placeholder {
+      color: @placeholderColor;
+    }
+
+    .uni-input,
+    textarea,
+    input {
+      font-size: 14px;
+    }
+
+    textarea {
+      width: auto;
+    }
+  }
+}
+.btn-wrappers {
+  width: 100%;
+  margin: 0 auto 16px;
+  flex: 0 0 120rpx;
+  // bottom: 50px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 25%;
+  .tabs-wraps {
+    background-color: #fff;
+    padding: 0 10px;
+    border-radius: 16px;
+    box-shadow: 0 2px 3px 0 rgb(79 85 101 / 6%);
+    overflow: visible;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 96px;
+    /deep/.tabs.default-tabs .item.active .wrap:before {
+      width: 0px;
+      height: 0px;
+    }
+    .default-tabs {
+      position: relative;
+      margin-bottom: -30px;
+      .hand:before,
+      .send:before {
+        position: absolute;
+        content: '';
+        top: -18px;
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+        display: inline-block;
+      }
+      .hand.active:before {
+        background: url(@/static/images/clock/clock-5.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+      .hand:before {
+        background: url(@/static/images/clock/clock-4.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+      .send.active:before {
+        background: url(@/static/images/clock/clock-15.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+      .send:before {
+        background: url(@/static/images/clock/clock-2.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}

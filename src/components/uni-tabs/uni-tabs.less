@@ -1,0 +1,70 @@
+@import '~@/styles/common';
+.tabs {
+  display: flex;
+  align-items: center;
+  margin: -15px;
+  flex-wrap: wrap;
+  .item {
+    flex: 1;
+    margin: 15px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /deep/ .wrap {
+      margin: 0 15px;
+      text-align: center;
+      background-color: #f4f4f4;
+      color: #94a2af;
+      line-height: 54px;
+      font-size: 13px;
+      flex: 1;
+      border: 2px solid #0000;
+      border-radius: 10px;
+      &:not(:last-child) {
+        border-right: none;
+      }
+    }
+    &.active /deep/ .wrap {
+      border: 2px solid #496fe5;
+      color: #496fe5;
+      background-color: #fff;
+    }
+  }
+  &.default-tabs{
+    width: 100%;
+    margin: 0;
+    .item {
+      flex: 1;
+      margin: 0;
+      /deep/ .wrap {
+        background-color: transparent;
+      }
+      &.active /deep/ .wrap {
+        border: none;
+        color: #496fe5;
+        position: relative;
+        font-size: 13px;
+        &:before{
+          content: '';
+          width: 40px;
+          height: 4px;
+          background: #496fe5;
+          position: absolute;
+          z-index: 1;
+          bottom: 0px;
+          left: 50%;
+          margin-left: -20px;
+        }
+      }
+    }
+  }
+  &.no-line{
+    .item{
+      &.active /deep/ .wrap{
+        &:before{
+          display: none;
+        }
+      }
+    }
+  }
+}

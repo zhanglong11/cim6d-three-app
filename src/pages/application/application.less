@@ -1,0 +1,43 @@
+@import url('~@/styles/common.less');
+.wrap {
+  padding: 0 25px 30px;
+  .card-warp{
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    > li {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 25%;
+      height: 160px;
+      padding: 10px;
+      .list-icon {
+        width: 80px;
+        height: 80px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      > img {
+        width: 80px;
+        height: 80px;
+      }
+      > p {
+        font-size: 12px;
+        flex-shrink: 0;
+        margin-top: 6px;
+        text-align: center;
+        width: 100%;
+        .ellipsis;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+安卓秘钥
+cim6dCloud
+
+施工
+包名：cim6dCloud.keystore
+appid：__UNI__24AA3C2
+生成证书命令：keytool -genkey -v -keystore cim6dCloud.keystore -alias cim6dCloud.keystore -keyalg RSA -keysize 2048 -validity 10000
+证书文件：cim6dCloud.keystore

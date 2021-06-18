@@ -1,0 +1,131 @@
+.btn-wrappers {
+  width: 100%;
+  margin: 0 auto 16px;
+  flex: 0 0 120rpx;
+  // bottom: 50px;
+  .tabs-wraps {
+    background-color: #fff;
+    padding: 0 10px;
+    border-radius: 16px;
+    box-shadow: 0 2px 3px 0 rgb(79 85 101 / 6%);
+    overflow: visible;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 96px;
+    /deep/.tabs.default-tabs .item.active .wrap:before {
+      width: 0px;
+      height: 0px;
+    }
+    .default-tabs {
+      position: relative;
+      margin-bottom: -30px;
+      .hand:before,
+      .send:before {
+        position: absolute;
+        content: '';
+        top: -18px;
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+        display: inline-block;
+      }
+      .hand.active:before {
+        background: url(@/static/images/clock/clock-5.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+      .hand:before {
+        background: url(@/static/images/clock/clock-4.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+      .send.active:before {
+        background: url(@/static/images/clock/clock-15.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+      .send:before {
+        background: url(@/static/images/clock/clock-2.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+.wrap {
+  margin-top: 16px;
+  width: 100%;
+  padding: 0 25rpx;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  video {
+    width: 100%;
+  }
+  .tip {
+    font-size: 12px;
+    color: #999;
+    padding-left: 5px;
+  }
+  .main-headers {
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90rpx;
+    background-color: #fff;
+    padding: 0 40rpx;
+  }
+}
+.container {
+  margin-top: 10px;
+  .body-main {
+    padding: 20px 10px;
+    .icon-m {
+      width: 20px;
+      height: 20px;
+      background-color: #6fc7fa;
+      display: inline-block;
+      border-radius: 50%;
+    }
+  }
+
+  .item-desc {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+  }
+  .item-desc:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    background: url(@/static/images/clock/clock-14.png) no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  .colck-update {
+    font-size: 14px;
+    color: #6fc7fa;
+    margin-left: 20px;
+  }
+}
+.body-header {
+  height: 315rpx;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .body-item {
+    border-radius: 50%;
+    width: 217rpx;
+    height: 217rpx;
+    background-size: 100% 100%;
+    background: url(@/static/images/clock/clock-1.png) no-repeat center center;
+    background-position: 50% 85%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,68 @@
+@import '~@/styles/common.less';
+.main-body {
+  padding-bottom: 41px;
+  .card-title-outer {
+    width: 700rpx;
+    margin: 0 auto;
+    .title {
+      padding-top: 20rpx;
+      padding-left: 25rpx;
+      padding-right: 12rpx;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .btn-add {
+        background: #00aeff;
+        color: #fff;
+        padding: 8px 8px;
+        border-radius: 10px;
+      }
+    }
+  }
+  .uni-card {
+    width: 100%;
+    position: relative;
+    .icon-clear{
+      position: absolute;
+      top: -26rpx;
+      right: 10rpx;
+      z-index: 10;
+    }
+  }
+  .placeholder {
+    color: @placeholderColor;
+  }
+
+  .uni-input,
+  textarea,
+  input {
+    font-size: 14px;
+  }
+
+  textarea {
+    width: auto;
+  }
+  .line {
+    margin: 30rpx 20rpx;
+    height: 2rpx;
+    background-color: @line;
+  }
+}
+.border-top {
+  .btn-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    font-size: 14px;
+    .btn-delete {
+      background: red;
+        color: #fff;
+        font-size: 14px;
+        padding: 4px 16px;
+        border-radius: 10px;
+    }
+  }
+}

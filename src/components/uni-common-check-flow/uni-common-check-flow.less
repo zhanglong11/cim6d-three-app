@@ -1,0 +1,326 @@
+@import url('~@/styles/common.less');
+@white-border:#BFC2CE;
+@white-bg:#E7E9F0;
+@blue-border:#2B7BFF;
+@blue-circle-bg:#2B7BFF;
+@blue-line-bg:#73A5F9;
+@red-bg:#f00;
+.form-details {
+  /deep/.approver-main {
+    height: auto;
+    padding: 22px 22px 0 0;
+  }
+  .details-header {
+    padding: 0 24px 24px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    .details-icon {
+      margin-right: 20px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+.process-title {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  padding: 22px;
+  width: 100%;
+  .title {
+    font-size: 16px;
+    flex: 1;
+  }
+  /deep/.status {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+.flow-container {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /*flex-wrap: wrap;*/
+  .item {
+    max-width: 100%;
+    min-width: 300rpx;
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    .content-label {
+      width: 220rpx;
+      box-sizing: content-box;
+      margin-bottom: 10rpx;
+      text-align: right;
+      overflow: hidden;
+      span{        
+        height: 40rpx;
+        line-height: 40rpx;
+        padding: 0 12rpx;
+        border-radius: 20rpx;
+        max-width: 100%;
+        .ellipsis;
+        display: inline-block;
+      }
+      .label-0 {
+        color: #5dcd26;
+        background-color: #ddf4d1;
+      }
+      .label-1 {
+        color: #4581ff;
+        background-color: #ebf1ff;
+      }
+      .label-2 {
+        color: #b9903a;
+        background-color: #faf0da;
+      }
+    }
+    .circle-line {
+      flex: 0 0 20rpx;
+      height: 100%;
+      margin-left:30px;
+      margin-top: 10px;
+      .circle {
+        height: 20rpx;
+        width: 20rpx;
+        background-color: #fff;
+        border: 4rpx @white-border solid;
+        border-radius: 100%;
+        z-index: 2;
+        position: relative;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 4rpx;
+        height: 100%;
+        margin-left: 10rpx;
+        background-color: @white-bg;
+      }
+      &.isCurrent {
+        .circle {
+          background-color: #fff;
+          border: 4rpx @blue-circle-bg solid;
+        }
+        &:after {
+          background-color: @white-bg;
+        }
+      }
+      &.isSuccess {
+        .circle {
+          background-color: @blue-circle-bg;
+          border: 4rpx @blue-circle-bg solid;
+        }
+        &:after {
+          background-color: @blue-line-bg;
+        }
+      }
+      &.isFailure {
+        .circle {
+          background-color: @red-bg;
+          border: 4rpx @red-bg solid;
+        }
+        &:after {
+          background-color: @white-bg;
+        }
+      }
+    }
+    &.isReadNode {
+      .circle-line {
+        .circle {
+          background-color: #fff;
+          border: 4rpx @white-border solid;
+        }
+        &.passNotRead{
+          .circle {
+            background-color: @white-bg;
+            border: 4rpx @white-border solid;
+          }
+        }
+        &.isSuccess {
+          .circle {
+            background-color: @blue-circle-bg;
+            border: 4rpx @blue-circle-bg solid;
+          }
+        }
+      }
+    }
+    &:last-child {
+      .content{
+        border-bottom:none;
+      }
+      .circle-line {
+        height: auto;
+        &:after {
+          content: '';
+          height: 0;
+        }
+      }
+    }
+    .content {
+      flex: 1;
+      padding: 0 10rpx 10rpx 10rpx;
+      margin-right: 40rpx;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin:0 20rpx;
+      padding-bottom: 60rpx;
+      //border-bottom:2px #929292 dotted;
+      &.isCurrent {
+        color: @blue-line-bg;
+      }
+      &.isFailure {
+        color:  @red-bg;
+      }
+      .user {
+        margin: 0px 0 10rpx 0;
+        line-height: 1.6;
+      }
+      .company {
+        max-height: 50px;
+        text-align: center;
+        margin-bottom: 3px;
+        .ellipsis;
+        width: 100%;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.isAddCustomForm .item{
+  &.isReadNode{
+    .circle-line {
+      .circle {
+        background-color: #fff;
+        border: 4rpx #e7e9f0 solid;
+      }
+    }
+  }
+
+}
+.uni-popup{
+  .popup-container{
+    width: 700rpx;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    .title{
+      height: 80px;
+      line-height: 80px;
+      border-bottom: 2rpx #bab7b7 solid;
+      padding-left: 44px;
+      font-weight: normal;
+    }
+    .audit-body{
+      flex: 1;
+      max-height: 60vh;
+      overflow-y:scroll;
+      background-color: #f6f6f6;
+      padding: 10rpx;
+      line-height: 60rpx;
+      /deep/ .approver-main{
+        padding: 20rpx 50rpx;
+      }
+      /deep/ .fm-form{
+        .el-form-item__label{
+          width: 150rpx!important;
+          color:#C0C4CC;
+        }
+        .el-form-item__content{
+          margin-left: 150rpx!important;
+        }
+      }
+      .audit-card{
+        margin-bottom: 40rpx;
+        background: #ffffff;
+        box-shadow: 0 2px 3px 0 rgba(79, 85, 101, 0.06);
+        border-radius:16px;
+        position: relative;
+        top: 0;
+        height: auto;
+        left: 0;
+        padding:10rpx ;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        .audit-detail-item{
+          display: flex;
+          padding: 10rpx 30rpx;
+          color:#C0C4CC;
+          font-size: 14px;
+          .label{
+            flex:0 0 150rpx;
+          }
+          .value{
+            flex:1
+          }
+        }
+      }
+    }
+  }
+}
+.uni-dialog-button-group {
+  background-color: #fff;
+  height: auto;
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+  flex-direction: row;
+  border-top-color: #f5f5f5;
+  border-top-style: solid;
+  border-top-width: 1px;
+  justify-content: center;
+}
+
+.uni-dialog-button {
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  &.btn-primary{
+    color: #fff;
+    background-color: #1c83d0;
+  }
+}
+
+.uni-border-left {
+  border-left-color: #f0f0f0;
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+.uni-dialog-button-text {
+  font-size: 14px;
+}
+
+.card-header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 25rpx 0;
+  font-weight: bold;
+}
+.no-padding-work{
+  margin-bottom: 20px;
+  /deep/.main-body{
+    padding: 0;
+  }  
+}
+.is-process{
+  margin-top: 24px !important;
+}

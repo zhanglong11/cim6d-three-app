@@ -1,0 +1,230 @@
+@import '~@/styles/common.less';
+@import '~@/styles/list.less';
+
+.scroll-roll {
+  margin-top: -30px;
+}
+
+.main {
+  .main-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top: 10px;
+    .main-headers {
+      border-radius: 20px 20px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 90rpx;
+      background-color: #fff;
+      padding: 0 40rpx;
+    }
+    .cardWrapper {
+      flex-grow: 1;
+      position: relative;
+      .main-content {
+        margin-bottom: 10px;
+        .uni-card {
+          font-size: 12px;
+          color: #4f6481;
+          line-height: 48px;
+          width: 100%;
+          padding: 20px;
+        }
+        .tody-clock:before {
+          content: '';
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+          display: inline-block;
+          background: url(@/static/images/clock/clock-10.png) no-repeat center;
+          background-size: 100% 100%;
+        }
+      }
+    }
+
+    .card-body {
+      .titleName {
+        white-space: pre-wrap;
+      }
+    }
+  }
+
+  .calendar-wrap {
+    position: relative;
+    .calendar-view-mode-control {
+      image {
+        width: 30rpx;
+        height: 40rpx;
+        margin-right: 10rpx;
+        top: 6rpx;
+      }
+      position: absolute;
+      z-index: 2;
+      top: 24px;
+      right: 20px;
+      color: #4778f3;
+      font-size: 12px;
+    }
+    /deep/ .calendar-tools {
+      height: 100rpx;
+      .calendar-prev {
+        height: 100%;
+      }
+      .calendar-info {
+        height: 100%;
+      }
+      .calendar-info {
+        height: 100%;
+        width: 300rpx;
+        .mc-month {
+          width: 100%;
+          height: 50rpx;
+          line-height: 50rpx;
+          .mc-month-inner {
+            width: 100%;
+            span {
+              display: block;
+              width: 100%;
+              height: 50rpx;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mpvue-calendar {
+    // border-radius: 40px;
+    /deep/ .mc-day.pin {
+      font-size: 10px !important;
+    }
+    /deep/ .mc-day.pinred {
+      font-size: 10px !important;
+    }
+    /deep/ .selected.mc-today-element {
+      /deep/span {
+        background-color: #3b75fb;
+        border-radius: 50%;
+      }
+    }
+  }
+  /*/deep/ .calendar-info > div.mc-month .mc-month-inner > span {
+    height: 48px;
+  }*/
+  /deep/ .pin {
+    .slot-element {
+      width: 100%;
+      text-align: center;
+      color: green;
+      position: relative;
+      top: -10px;
+      height: 10px;
+      line-height: 10px;
+    }
+  }
+  /deep/ .pinred {
+    .slot-element {
+      width: 100%;
+      text-align: center;
+      color: red;
+      position: relative;
+      top: -10px;
+      height: 10px;
+      line-height: 10px;
+    }
+  }
+}
+.flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .flex-left {
+    flex: 1 50%;
+  }
+
+  .uni-status {
+    margin-left: 20rpx;
+  }
+}
+
+.card-info {
+  flex: 1;
+  width: 50%;
+  position: relative;
+
+  .flex-item {
+    padding: 0 10rpx;
+    display: flex;
+    align-items: flex-start;
+
+    .flex-item-label {
+      flex-basis: auto;
+      white-space: nowrap;
+    }
+
+    &.title {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.circle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.item-body {
+  padding: 0 20rpx 10rpx 20rpx;
+  h2 {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 10 rpx 0;
+    span {
+      width: 5px;
+      height: 26px;
+      margin-right: 10px;
+      border-radius: 2.5px;
+    }
+    .ellipsis;
+  }
+  .flex-body {
+    display: flex;
+    .content {
+      flex: 1 1 auto;
+      max-width: 600rpx;
+
+      .line {
+        display: flex;
+        span {
+          min-width: 100rpx;
+          &:last-child {
+            flex: 1;
+          }
+        }
+      }
+      p {
+        margin-top: 10px;
+        color: #989898;
+      }
+    }
+
+    aside {
+      max-width: 150rpx;
+      align-self: center;
+      .common-button {
+        padding: 4rpx 20rpx;
+      }
+    }
+  }
+  p,
+  span {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,71 @@
+.info-view {
+  font-size: 14px;
+  padding: 5px 30px;
+  color: #666666;
+}
+.no-data {
+  font-size: 14px;
+  color: #999999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: solid 1px #f5f5f5;
+  margin: 20px 0px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #f5f5f5;
+    font-size: 14px;
+    padding: 20px 20px;
+    .title {
+      font-weight: bold;
+    }
+    .operation {
+      a {
+        margin-left: 20px;
+      }
+    }
+  }
+  .materials-con {
+    font-size: 14px;
+    .materials-item {
+      background: #f9f9f9;
+      margin: 0px 40px 20px;
+      padding: 10px;
+      .title {
+        font-weight: bold;
+        color: #999999;
+      }
+      .detail {
+        display: flex;
+        .detail-item {
+          flex: 0 0 50%;
+          .label {
+            color: #cccccc;
+          }
+          .value {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            color: #666666;
+          }
+          /deep/ .uni-input-placeholder {
+            font-size: 14px;
+          }
+          /deep/ .uni-input-input {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

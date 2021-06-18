@@ -1,0 +1,72 @@
+@import '~@/styles/common';
+.icon-board-info{
+  background-image: url('@/static/images/icon/@2x/board-info.png');
+}
+.icon-board-safe{
+  background-image: url('@/static/images/icon/@2x/board-safe.png');
+}
+.card-header{
+  .title{
+    display: flex;
+    align-items: center;
+    font-size: @h1FontSize;
+    color: @h1FontColor;
+    padding: 0 31px;
+    line-height: 76px;
+  }
+  .subTitle{
+    display: flex;
+    align-items: center;
+    padding-bottom: 8rpx;
+    .subItem{
+      flex: 0 25%;
+      box-sizing: border-box;
+      text-align: center;
+      .subItem-count{
+        color: @mainColor;
+        font-weight: bold;
+        font-size:@h2FontSize ;
+        min-height: 48rpx;
+        &.danger{
+          color: @dangerColor;
+        }
+        &.warn{
+          color: @warningColor;
+        }
+      }
+      .subItem-text{
+        color: @h2FontColor;
+        position: relative;
+        font-size: 14px;
+        &.border::after{
+          content: '';
+          width: 1px;
+          position: absolute;
+          top: 10rpx;
+          bottom: 10rpx;
+          right: 0;
+          background-color:@h2FontColor;
+          // background: #dcdcdc;
+          transform: scaleX(.5);
+
+        }
+      }
+    }
+  }
+}
+.card-footer {
+  display: flex;
+  line-height: 76px;
+  justify-content: space-between;
+  padding: 0 31px;
+  font-size: 12px;
+  .moreTip{
+    color:@mainColor;
+  }
+}
+.scroll-roll{
+  .main-body{
+    padding-top: 40rpx;
+    padding-bottom: 50rpx;
+  }
+}

@@ -1,0 +1,63 @@
+@import '~@/styles/common.less';
+
+.list {
+  .item {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 25px;
+    list-style: none;
+    section {
+      position: relative;
+      aside {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        transform: translateY(-50%);
+      }
+      h2 {
+        display: flex;
+        align-items: center;
+        padding: 20px 31px;
+        font-size: 14px;
+        font-weight: normal;
+        span {
+          width: 5px;
+          height: 26px;
+          margin-right: 10px;
+          border-radius: 2.5px;
+        }
+      }
+      > p {
+        padding: 0 160px 20px 30px;
+        color: #989898;
+        .ellipsis;
+        &.footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-right: 20px;
+          padding-top: 10px;
+          border-top: 1px solid #eee;
+        }
+      }
+    }
+
+    p,
+    span {
+      font-size: 12px;
+    }
+
+    footer {
+      margin: 0 31px;
+      display: flex;
+      line-height: 76px;
+      justify-content: space-between;
+      border-top: 1px solid #f1f1f1;
+
+      span {
+        color: #4f6481;
+      }
+    }
+  }
+}

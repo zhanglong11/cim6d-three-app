@@ -1,0 +1,87 @@
+
+@import url('~@/styles/common.less');
+.wrap {
+  padding: 0 25px 30px;
+  .card-warp{
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    > li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 33.3333%;
+      height: 160px;
+      padding: 10px;
+      position: relative;
+      &.is-system{
+        .user-list{
+          background: #8197e0;
+          .name{
+            color: #fff;
+          }
+        }
+      }
+      .user-list{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+      }
+      .is-approval{
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        z-index: 1;
+        top: 23px;
+        left: 50%;
+        margin-left: -40px;
+        &:after{
+          content: '';
+          width: 65px;
+          height: 26px;
+          background: url('./images/approval.png') no-repeat;
+          background-size: cover;
+        }
+      }
+      .list-icon {
+        width: 80px;
+        height: 80px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      > img {
+        width: 80px;
+        height: 80px;
+      }
+      .name {
+        font-size: 12px;
+        flex-shrink: 0;
+        margin-top: 6px;
+        text-align: center;
+        width: 100%;
+        .ellipsis;
+      }
+    }
+  }
+}
+
+.tabs-wrap {
+  margin-bottom: 22px;
+}
